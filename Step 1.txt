@@ -1,0 +1,37 @@
+Step 1
+
+Requirements
+- SQl Server Management Studio (SSMS)
+- Visual Studio (2022)
+- Framework (.Net 7.0)
+
+
+Create Project (MVC)
+	UI ~ this will be your user interface
+~~ Reference the 'Data Layer' project
+
+~~ appsettings.json
+~~~ Add connection string
+	"ConnectionStrings": {
+    "constr": "server=;database=;Integrated Security="
+  }
+
+~~ Program.cs
+~~~ // Add services to the container.
+	builder.Services.AddTransient<ISqlDA, SqlDA>();
+
+
+Add Project (class Library)
+	Data ~ this will be your data access layer
+
+~~ Add the following Nugget packages
+~~~~ Dapeer
+~~~~ Microsoft.Data.SqlClient
+~~~~ Microsoft.Extension.Configuration.Abstraction
+
+~~ Add folder for Data Access
+~~~ Create 'interface' for SqlDataAccess (add 'I' as prefix)
+~~~ Create 'class' for SqlDataAccess
+*Check the repository and populate the interface and class accordingly
+
+
