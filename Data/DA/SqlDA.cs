@@ -15,7 +15,7 @@ namespace Data.Layer.DA
             _config = config;
         }
 
-        public async Task<IEnumerable<T>> GetData<T, P>
+        public async Task<IEnumerable<T>> GetData<T, P> // read
             (string spName, P parameters,
             string connectionId = "constr") //T is the type of return data & P is the type of parameter
         {
@@ -26,7 +26,7 @@ namespace Data.Layer.DA
                 (spName, parameters, commandType: CommandType.StoredProcedure);
         }
 
-        public async Task SaveData<T>
+        public async Task SaveData<T> // create - update - delete
             (string spName, T parameters,
             string connectionId = "constr")
         {

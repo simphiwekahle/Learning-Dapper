@@ -1,10 +1,12 @@
 using Data.Layer.DA;
+using Data.Layer.Repo;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<ISqlDA, SqlDA>();
+builder.Services.AddTransient<IPersonRepo, PersonRepo>();
 
 var app = builder.Build();
 
