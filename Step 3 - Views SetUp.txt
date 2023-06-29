@@ -1,0 +1,28 @@
+Step 3
+
+User Interface
+
+Go to UI.MVC
+*Delete the following folders from 'wwwroot'
+~ 'css'
+~ 'js'
+~ 'lib'
+
+*Delete the following file from 'Views' folder
+~ '_ValidationScriptPartial.cshtml'
+
+~ Go to '_Layout.cshtml'
+~~ Remove everything
+~~ go to 'https://getbootstrap.com/docs/5.0/getting-started/introduction/'
+** copy & paste the 'Starter template'
+
+
+~~ go to https://getbootstrap.com/docs/5.0/components/navbar/
+** copy & paste this navbar
+
+["And because we use classes for our navs, you can avoid the list-based approach entirely if you like."]
+
+*** Edit According to the github-repository
+** See changes made on the index page
+
+

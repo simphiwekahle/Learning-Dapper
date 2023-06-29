@@ -1,0 +1,20 @@
+Step 2
+
+Repository Architecture
+
+Go to Data.Layer ~ Project
+~~ Add 'Models' folder
+~~~ Add 'Domain' folder
+~~~~ Add 'Table.cs' class
+	*verify that your variables are similar to those in your SSMS database table.
+
+~~ Add 'Repository' folder
+~~~ Add 'interface' for TableRepository (add 'I' as prefix)
+~~~ Add 'class' for TableRepository
+
+Go to UI.MVC Project
+~ Go to 'Program.cs'
+~~ // Add services to the container.
+	builder.Services.AddTransient<ITableRepository, TableRepository>();
+
+*Check the repository and populate the interface and class accordingly
