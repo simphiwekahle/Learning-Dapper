@@ -51,12 +51,13 @@ namespace Data.Layer.Repo
             try
             {
                 await _db.SaveData("delete_person",
-                    new
-                    {
-                        Id = id
-                    });
+                new
+                {
+                    Id = id
+                });
                 return true;
             }
+
             catch (Exception ex)
             {
                 return false;
@@ -71,6 +72,8 @@ namespace Data.Layer.Repo
                 {
                     Id = id
                 });
+            
+
             return result.FirstOrDefault();
         } 
 

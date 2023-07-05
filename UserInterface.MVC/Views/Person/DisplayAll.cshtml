@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Person>
+
+@{
+}
+
+<h3>People List</h3>
+
+<div class="my-2">
+    <a href="/Person/Add" class="btn btn-info my-2">Add Person</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var person in Model)
+            {
+                <tr>
+                   <td>
+                       @person.name
+                   </td>
+                    <td>
+                        @person.email
+                    </td>
+                    <td>
+                        @person.address
+                    </td>
+                    <td>
+                        <a 
+                            href="/Person/Edit?id=@person.id" 
+                            class="btn btn-success">
+                            Edit
+                        </a>
+                        <a 
+                            href="/Person/Delete?id=@person.id"
+                            onclick="return window.confirm('Are You Sure You Want To Delete This Person?')" 
+                            class="btn btn-danger">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

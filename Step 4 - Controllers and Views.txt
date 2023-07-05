@@ -1,0 +1,23 @@
+Step 4
+
+Controller
+
+Go to UserInterface.MVC
+
+*Add PersonController on 'Controllers' Folder
+~~ Populate the 'PersonController" according to the github repository
+	** Have methods for the following
+		1. Add x2
+		2. Edit x2
+		3. GetById
+		4. DisplaAll
+		5. Delete
+
+Go to _ViewImports.cshtml
+** Add '@using Data.Layer.Models.Domain'
+
+*Create Razor View for DisplayAll
+ **Update any connection string
+
+*Create Razor View for Add
+*Create Razor View for Edit
